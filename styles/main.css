@@ -16,8 +16,18 @@ body {
 .corals {
   width: 110vw;
   margin-left: 50%;
-  margin-top: 57px;
+  margin-top: -60vw;
+  padding-top: 21px;
   transform: translateX(-50%);
+}
+
+.fish {
+  position: sticky;
+  height: 60vw;
+  top: 50vh;
+  left: 50vw;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 10;
 }
 
 .text {
@@ -25,10 +35,11 @@ body {
   margin-top: 50px;
   top: 0;
   width: 100%;
+  z-index: 20;
 }
 
 .text img {
-  margin-bottom: 355px;
+  margin-bottom: 18.5vw;
 }
 
 .text__wrapper.-right {
