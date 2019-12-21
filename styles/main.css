@@ -1,5 +1,41 @@
 @import "reset.css";
-@import url('https://fonts.googleapis.com/css?family=Comfortaa:700&display=swap&subset=cyrillic');
+@import url("https://fonts.googleapis.com/css?family=Comfortaa:700&display=swap&subset=cyrillic");
+
+@keyframes xAxis {
+  0% {
+    transform: translateX(-40px);
+  }
+  25% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(40px);
+  }
+  75% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-40px);
+  }
+}
+
+@keyframes yAxis {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-30px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 
 * {
   box-sizing: border-box;
@@ -8,17 +44,95 @@
 }
 
 body {
-  font-family: 'Comfortaa', cursive;
+  font-family: "Comfortaa", cursive;
   overflow-x: hidden;
-  background: linear-gradient(180deg, #DFF4F2 29.77%, #D5EDEE 33.83%, #B9DCE3 40.83%, #8CBFD1 49.93%, #4D97B8 60.76%, #006699 72.68%);
+  background: linear-gradient(
+    180deg,
+    #dff4f2 29.77%,
+    #d5edee 33.83%,
+    #b9dce3 40.83%,
+    #8cbfd1 49.93%,
+    #4d97b8 60.76%,
+    #006699 72.68%
+  );
 }
 
 .corals {
-  width: 110vw;
+  width: 100%;
+  height: 309vw;
   margin-top: -70vh;
-  margin-left: 50%;
-  padding-top: 21px;
-  transform: translateX(-50%);
+}
+
+.corals__wrapper.bg {
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.corals__animate {
+  animation: yAxis 7s infinite linear;
+}
+
+.corals__wrapper {
+  width: 100%;
+  animation: xAxis 6s infinite linear;
+}
+
+.corals__wrapper img {
+  height: 309vw;
+}
+
+.corals__animate.animate1 {
+  animation-delay: 0s;
+  margin-left: -5vw;
+  z-index: 9;
+}
+.corals__animate.animate2 {
+  animation-direction: reverse;
+  animation-delay: 0.2s;
+  margin-left: -2vw;
+}
+.corals__animate.animate3 {
+  animation-direction: alternate-reverse;
+  animation-delay: 0.4s;
+  margin-left: -3.8vw;
+}
+.corals__animate.animate4 {
+  animation-direction: reverse;
+  animation-delay: 0.6s;
+  animation: yAxis 5s infinite linear;
+  margin-left: -2vw;
+}
+.corals__animate.animate5 {
+  animation-direction: reverse;
+  animation-delay: 0.3s;
+  animation: yAxis 5s infinite linear;
+  margin-left: -15vw;
+}
+
+.corals__wrapper.animate1 {
+  animation-delay: 0.6s;
+}
+.corals__wrapper.animate2 {
+  z-index: 11;
+  animation-direction: alternate-reverse;
+  animation-delay: 0.4s;
+}
+.corals__wrapper.animate3 {
+  z-index: 8;
+  animation-direction: reverse;
+  animation-delay: 0.1s;
+}
+.corals__wrapper.animate4 {
+  z-index: 7;
+  animation-direction: reverse;
+  animation-delay: 0.5s;
+}
+.corals__wrapper.animate5 {
+  z-index: 6;
+  animation-direction: reverse;
+  animation-delay: 0.6s;
 }
 
 .fish {
@@ -80,8 +194,9 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 22px;
 }
-.footer__content >* {
+.footer__content > * {
   flex: 1;
 }
 .footer__content__contacts {
