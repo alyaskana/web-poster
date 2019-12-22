@@ -3,37 +3,71 @@
 
 @keyframes xAxis {
   0% {
-    transform: translateX(-40px);
+    transform: translateX(-2vw);
   }
-  25% {
-    transform: translateX(0px);
+  15% {
+    transform: translateX(0vw);
   }
   50% {
-    transform: translateX(40px);
+    transform: translateX(2vw);
   }
-  75% {
-    transform: translateX(0px);
+  85% {
+    transform: translateX(0vw);
   }
   100% {
-    transform: translateX(-40px);
+    transform: translateX(-2vw);
+  }
+}
+@keyframes xAxis2 {
+  0% {
+    transform: translateX(-1.5vw);
+  }
+  15% {
+    transform: translateX(0vw);
+  }
+  53% {
+    transform: translateX(1.5vw);
+  }
+  85% {
+    transform: translateX(0vw);
+  }
+  100% {
+    transform: translateX(-1.5vw);
   }
 }
 
 @keyframes yAxis {
   0% {
-    transform: translateY(0px);
+    transform: translateY(0vw);
   }
-  25% {
-    transform: translateY(-30px);
+  20% {
+    transform: translateY(-1.5vw);
   }
-  50% {
-    transform: translateY(0px);
+  55% {
+    transform: translateY(0vw);
   }
-  75% {
-    transform: translateY(30px);
+  85% {
+    transform: translateY(1.5vw);
   }
   100% {
-    transform: translateY(0px);
+    transform: translateY(0vw);
+  }
+}
+@keyframes yAxis_2 {
+  0% {
+    transform: translateY(0vw);
+  }
+  15% {
+    transform: translateY(1.3vw);
+  }
+  65% {
+    transform: translateY(0vw);
+  }
+  85% {
+    transform: translateY(-1.5vw);
+  }
+  100% {
+    transform: translateY(0vw);
   }
 }
 
@@ -70,12 +104,12 @@ body {
 }
 
 .corals__animate {
-  animation: yAxis 7s infinite linear;
+  animation: yAxis 8s infinite linear;
 }
 
 .corals__wrapper {
   width: 100%;
-  animation: xAxis 6s infinite linear;
+  animation: xAxis 7s infinite linear;
 }
 
 .corals__wrapper img {
@@ -99,15 +133,16 @@ body {
   z-index: 7;
   animation-direction: reverse;
   animation-delay: 0.5s;
+  animation: xAxis2 6s infinite linear;
 }
 .corals__wrapper.animate5 {
   z-index: -1;
   animation-direction: reverse;
   animation-delay: 0.6s;
+  animation: xAxis2 4s infinite linear;
 }
 
 .corals__animate.animate1 {
-  animation-delay: 0s;
   margin-left: -5vw;
   z-index: 9;
 }
@@ -122,15 +157,14 @@ body {
   margin-left: -3.8vw;
 }
 .corals__animate.animate4 {
-  animation-direction: reverse;
   animation-delay: 0.6s;
-  animation: yAxis 5s infinite linear;
+  animation: yAxis2 6s infinite linear;
   margin-left: -2vw;
 }
 .corals__animate.animate5 {
   animation-direction: reverse;
   animation-delay: 0.3s;
-  animation: yAxis 5s infinite linear;
+  animation: yAxis2 7s infinite linear;
   margin-left: -15vw;
 }
 
@@ -211,15 +245,16 @@ footer {
 }
 
 
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) and (max-width: 1279px) {
   /* footer for vertical and horizontal tablet*/
-  .logo.big {
-    display: none;
+  .text {
+    margin-top: 25px;
   }
-  .logo.medium {
-    display: block;
-    height: 55px;
-    flex: 0.5;
+  .text__wrapper.-right {
+    margin: 0 20px 0 0;
+  }
+  .text__wrapper.-left {
+    margin: 0 0 0 20px;
   }
   footer {
     margin: 45px 25px 25px;
@@ -228,9 +263,17 @@ footer {
     margin: 20px 20px 15px;
     font-size: 14px;
   }
+  .logo.big {
+    display: none;
+  }
+  .logo.medium {
+    display: block;
+    height: 55px;
+    flex: 0.5;
+  }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1023px) {
 /* change corals and text margin for vertical tablet */
   .corals__container.big {
     display: none;
@@ -245,10 +288,74 @@ footer {
   .corals__wrapper img {
     height: 485vw;
   }
-   .text {
-    margin-top: 30px;
-  }
   .text img {
     margin-bottom: 56vw;
+  }
+}
+
+@media (max-width: 767px) {
+  /* mobile */
+  .fish {
+    height: auto;
+    width: 38vw;
+    top: 30vh;
+  }
+
+  .corals {
+    margin-top: -82vw;
+  }
+  .corals__container.big {
+    display: none;
+  }
+  .corals__container.small {
+    display: block;
+  }
+  .corals__container.small .corals__animate {
+    margin-left: -13vw;
+  }
+  .corals, 
+  .corals__wrapper img {
+    height: 669vw;
+  }
+
+  .text {
+    margin-top: 15px;
+  }
+  .text img {
+    margin-bottom: 88vw;
+  }
+  .text__wrapper.-right {
+    margin: 0 10px;
+  }
+  .text__wrapper.-left {
+    margin: 0 10px;
+  }
+  .h1-1,
+  .h1-2,
+  .h1-3,
+  .h1-4 {
+    width: 100%;
+  }
+  .h1-4.big {
+    display: none;
+  }
+  .h1-4.small {
+    display: block;
+  }
+
+  footer {
+    margin: 10px 0;
+  }
+  .footer__content {
+    margin: 7px 10px 5px;
+    font-size: 9px;
+  }
+  .logo.big {
+    display: none;
+  }
+  .logo.medium {
+    display: block;
+    height: 30px;
+    flex: 0.3;
   }
 }
