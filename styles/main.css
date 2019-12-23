@@ -76,6 +76,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+html {
+  overflow-x: hidden;
+}
 
 body {
   font-family: "Comfortaa", cursive;
