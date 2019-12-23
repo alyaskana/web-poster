@@ -298,7 +298,6 @@ footer {
   .fish {
     height: auto;
     width: 38vw;
-    top: 30vh;
   }
 
   .corals {
@@ -357,5 +356,11 @@ footer {
     display: block;
     height: 30px;
     flex: 0.3;
+  }
+}
+
+@media (max-width: 767px) and (min-height: 800px) {
+  .fish {
+    top: 40vh;
   }
 }
