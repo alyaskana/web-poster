@@ -170,10 +170,10 @@ body {
 
 .fish {
   position: sticky;
-  position: -webkit-sticky;
-  position: -moz-sticky;
-  position: -ms-sticky;
-  position: -o-sticky;
+  -webkit-position: sticky;
+  -moz-position: sticky;
+  -ms-position: sticky;
+  -o-position: sticky;
   height: 70vh;
   top: 50vh;
   left: 50vw;
