@@ -76,9 +76,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-html {
-  overflow-x: hidden;
-}
 
 body {
   font-family: "Comfortaa", cursive;
@@ -358,7 +355,7 @@ footer {
   .logo.medium {
     display: block;
     height: 30px;
-    flex: 0.3;
+    flex: 0.4;
   }
 }
 
